@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!-- ====== SEO：改标题和描述时改这里 ====== -->
+<title>To Lin 展信佳 · 一封写给 Lin 的信 | Qian.G</title>
+<meta name="description" content="能在茫茫人海相遇，真的是一件很幸运的事。写给 Lin 的一封信，2026.10.10，Qian.G。" />
+<meta name="keywords" content="To Lin,展信佳,写给Lin的信,打字机,逐字显示,Qian.G" />
+<meta name="author" content="Qian.G" />
+<meta name="robots" content="index,follow" />
+<link rel="canonical" href="https://qiang123-bot.github.io/lin/" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="To Lin 展信佳" />
+<meta property="og:description" content="能在茫茫人海相遇，真的是一件很幸运的事。写给 Lin 的一封信。" />
+<meta property="og:site_name" content="展信佳" />
+<meta property="og:url" content="https://qiang123-bot.github.io/lin/" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="To Lin 展信佳" />
+<meta name="twitter:description" content="能在茫茫人海相遇，真的是一件很幸运的事。写给 Lin 的一封信。" />
+
+<meta name="theme-color" content="#0e1013" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230e1013'/><rect x='24' y='68' width='52' height='9' rx='4' fill='%23d98b6a'/><rect x='30' y='30' width='7' height='7' fill='%23e8e8e6'/><rect x='46' y='30' width='7' height='7' fill='%23e8e8e6'/><rect x='62' y='30' width='7' height='7' fill='%23d98b6a'/></svg>" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "To Lin 展信佳",
+  "url": "https://qiang123-bot.github.io/lin/",
+  "description": "能在茫茫人海相遇，真的是一件很幸运的事。写给 Lin 的一封信。",
+  "inLanguage": "zh-CN",
+  "author": { "@type": "Person", "name": "Qian.G" }
+}
+</script>
+
+<style>
+  :root {
+    --bg: #0e1013;
+    --fg: #e8e8e6;
+    --dim: #8b929b;
+    --accent: #d98b6a;
+    --panel: rgba(255, 255, 255, .07);
+  }
+  html[data-theme="light"] {
+    --bg: #f7f5f1;
+    --fg: #23211f;
+    --dim: #8a857e;
+    --accent: #b4562f;
+    --panel: rgba(0, 0, 0, .06);
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, "PingFang SC", "Microsoft YaHei", monospace;
+    font-size: 17px;
+    line-height: 1.95;
+    -webkit-font-smoothing: antialiased;
+    transition: background .3s, color .3s;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 8vh 24px 110px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  header { margin-bottom: 2.2em; }
+  h1 {
+    margin: 0 0 .4em;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: .16em;
+    color: var(--dim);
+  }
+  .sub { margin: 0; font-size: 13px; color: var(--dim); }
+
+  #stage { flex: 1; }
+  #stage p {
+    margin: 0 0 1.05em;
+    white-space: pre-wrap;
+    word-break: break-word;
+    text-indent: 2em;
+  }
+  #stage p.open { text-indent: 0; }
+  #stage p.sign { text-indent: 0; text-align: right; }
+  /* 有 JS 时先藏住静态文本，避免打字前闪一下 */
+  html.js #stage { visibility: hidden; }
+
+  .caret {
+    display: inline-block;
+    width: .52em;
+    height: 1.02em;
+    margin-left: 2px;
+    background: var(--accent);
+    vertical-align: -.16em;
+    animation: blink 1.05s steps(1) infinite;
+  }
+  @keyframes blink { 50% { opacity: 0; } }
+
+  .bar {
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 14px 16px calc(14px + env(safe-area-inset-bottom));
+    background: linear-gradient(to top, var(--bg) 55%, transparent);
+  }
+  button {
+    font: inherit;
+    font-size: 13px;
+    color: var(--dim);
+    background: var(--panel);
+    border: 1px solid transparent;
+    border-radius: 999px;
+    padding: 7px 15px;
+    cursor: pointer;
+    transition: color .2s, border-color .2s;
+  }
+  button:hover { color: var(--fg); border-color: var(--dim); }
+
+  .modal {
+    position: fixed; inset: 0;
+    background: rgba(0, 0, 0, .5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 20;
+  }
+  .modal.on { display: flex; }
+  .modal-box {
+    background: var(--bg);
+    border: 1px solid var(--panel);
+    border-radius: 12px;
+    padding: 16px;
+    width: min(640px, 100%);
+  }
+  .modal-box h2 { margin: 0 0 8px; font-size: 15px; font-weight: 600; }
+  .modal-box p.tip { margin: 0 0 10px; font-size: 12px; color: var(--dim); }
+  textarea {
+    width: 100%;
+    height: 240px;
+    background: var(--panel);
+    color: var(--fg);
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font: inherit;
+    font-size: 15px;
+    line-height: 1.8;
+    resize: vertical;
+  }
+  .modal-actions { display: flex; gap: 8px; justify-content: flex-end; margin-top: 12px; }
+
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+    .wrap { padding: 5vh 20px 110px; }
+  }
+</style>
+<script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>To Lin 展信佳</h1>
+      <p class="sub">Qian.G · 2026.10.10 · 点页面任意处可跳过动画</p>
+    </header>
+
+    <!-- ====== 正文：改这里的 <p> 就能换文本，每个 <p> 是一段 ====== -->
+    <article id="stage">
+      <p class="open">To Lin 展信佳：</p>
+      <p>我们相识于一方网络，没有朝夕相伴，没有面对面的沟通。能在茫茫人海相遇，真的是一件很幸运的事。</p>
+      <p>其实那件事情对于我来说真的很抱歉，我觉得那是一种让人无法原谅的事情，让你承受那么长时间的冷暴力，你最后说的那句话我到现在都记得很清楚，在现在这个手机不离手的时候怎么可能会有人做到一直不看手机，所以很抱歉，对不起。</p>
+      <p>从来没想到我们还会再有交集，那天的我手都在抖，看到你的信息我当时楞了半天不知道该怎么开口，最后我解释清楚，我一直想说把你加回来，又不好意思说，我可能就是那种比较扭捏的人，对很多事情都会考虑一下。</p>
+      <p>其实现在我经常就在想，你要是经常找我就好了，那天我确实事有一点难受的，不知道为什么就感觉很委屈，我不喜欢别人说脏话，因为不是语音，所以就可能会胡思乱想，但我其实还是很好的，我们说一下就好了，你玩游戏的时候可以叫我一起，应该是包能上分的，如果你想打什么标的话也可以上你的号帮你打。</p>
+      <p>假期里我发了那么多的抖音视频给你，我以为不会收到那么多回复了，很少会有人把上面所有的信息都一个一个翻开看，然后再回复，看到这么多的时候我内心真的很感动的，感性的人应该都是这样的，而且我当时还看了一个感人的片段。</p>
+      <p>网上都说“只要淡淡的，就会顺顺的”，我觉得淡淡的并不好，更喜欢浓浓的，到那种任何关系都可以在人生留下浓墨重彩，到任何事情都认真去对待。非常非常谢谢你！</p>
+      <p>我的大学挺无聊的，每天就是上课(虽然说我可能会旷很多课，可是人生是旷野啊，不旷怎么行)，吃饭，然后去工作室，就没有新的社交了，但是每天回宿舍也挺晚的，在工作室的时间回很长，经常回有一些比赛，因为我想靠这个去升本科，打比赛就可以免试升本了。缺点就是没有很多的时间去玩了。所以遇见你真的很幸运！</p>
+      <p>你上次说收好朋友的礼物，我不知道我什么时候能做到那种程度，不知道的话那就强制一点吧，这是来自一位世界上最帅，最好的小孩给你准备的哦。</p>
+      <p>愿LYQ天天开心！</p>
+      <p class="sign">Qian.G</p>
+      <p class="sign">2026.10.10</p>
+    </article>
+  </div>
+
+  <div class="bar">
+    <button id="btnReplay">重播</button>
+    <button id="btnText">换文本</button>
+    <button id="btnSound">音效：关</button>
+    <button id="btnTheme">浅色</button>
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="modal-box">
+      <h2>粘贴你的文本</h2>
+      <p class="tip">空行分段。第一段顶格，最后两段落款右对齐。保存后会存在这台设备的浏览器里。</p>
+      <textarea id="editor" spellcheck="false"></textarea>
+      <div class="modal-actions">
+        <button id="btnCancel">取消</button>
+        <button id="btnSave">保存并重播</button>
+      </div>
+    </div>
+  </div>
+
+<script>
+/* ====== 可调参数 ====== */
+const SPEED = 26;        // 每个字的间隔（毫秒），越小越快
+const PAUSE_PUNCT = 160; // 遇到标点时的额外停顿
+const PAUSE_PARA = 520;  // 段落之间的停顿
+
+const stage = document.getElementById("stage");
+const caret = document.createElement("span");
+caret.className = "caret";
+
+let paragraphs = [];
+let running = false;
+let skipped = false;
+let audioCtx = null;
+let soundOn = false;
+
+/* 段落样式：第一段顶格，最后两段右对齐（落款），其余首行缩进 */
+function clsFor(i, n) {
+  if (i === 0) return "open";
+  if (n >= 4 && i >= n - 2) return "sign";
+  return "";
+}
+
+/* 默认文本直接读页面里的静态段落：爬虫和读者看到的是同一份内容 */
+function staticText() {
+  return Array.from(stage.querySelectorAll("p")).map(p => p.textContent.trim()).filter(Boolean);
+}
+
+function loadText() {
+  const url = new URL(location.href);
+  const fromUrl = url.searchParams.get("t") || decodeURIComponent((location.hash || "").replace(/^#/, ""));
+  const saved = localStorage.getItem("lin:text");
+  const raw = fromUrl || saved;
+  return raw ? raw.split(/\n\s*\n/).map(s => s.trim()).filter(Boolean) : staticText();
+}
+
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+function beep() {
+  if (!soundOn) return;
+  try {
+    audioCtx = audioCtx || new (window.AudioContext || window.webkitAudioContext)();
+    const o = audioCtx.createOscillator();
+    const g = audioCtx.createGain();
+    o.type = "square";
+    o.frequency.value = 700 + Math.random() * 500;
+    g.gain.value = 0.015;
+    g.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.03);
+    o.connect(g).connect(audioCtx.destination);
+    o.start();
+    o.stop(audioCtx.currentTime + 0.03);
+  } catch (e) { /* 忽略音频错误 */ }
+}
+
+const delayFor = ch => "，。！？；：、,.!?;:".includes(ch) ? PAUSE_PUNCT : SPEED;
+
+function renderAll() {
+  stage.innerHTML = "";
+  paragraphs.forEach((text, i) => {
+    const p = document.createElement("p");
+    p.className = clsFor(i, paragraphs.length);
+    p.textContent = text;
+    stage.appendChild(p);
+    if (i === paragraphs.length - 1) p.appendChild(caret);
+  });
+  running = false;
+}
+
+async function play() {
+  if (running) return;
+  running = true;
+  skipped = false;
+  stage.innerHTML = "";
+  stage.style.visibility = "visible";
+
+  for (let i = 0; i < paragraphs.length; i++) {
+    const p = document.createElement("p");
+    p.className = clsFor(i, paragraphs.length);
+    stage.appendChild(p);
+    p.appendChild(caret);
+
+    for (const ch of paragraphs[i]) {
+      if (skipped) { renderAll(); return; }
+      p.insertBefore(document.createTextNode(ch), caret);
+      beep();
+      await sleep(delayFor(ch));
+    }
+    if (i < paragraphs.length - 1) await sleep(PAUSE_PARA);
+  }
+  running = false;
+}
+
+function skipOrReplay(e) {
+  if (e && e.target.closest("button, .modal")) return;
+  if (running) { skipped = true; } else { play(); }
+}
+
+/* ====== 交互绑定 ====== */
+const modal = document.getElementById("modal");
+const editor = document.getElementById("editor");
+
+document.addEventListener("click", skipOrReplay);
+document.addEventListener("keydown", e => {
+  if (modal.classList.contains("on")) return;
+  if (e.key === "Enter") skipOrReplay();
+});
+
+document.getElementById("btnReplay").onclick = () => play();
+
+document.getElementById("btnText").onclick = () => {
+  editor.value = paragraphs.join("\n\n");
+  modal.classList.add("on");
+  editor.focus();
+};
+document.getElementById("btnCancel").onclick = () => modal.classList.remove("on");
+document.getElementById("btnSave").onclick = () => {
+  localStorage.setItem("lin:text", editor.value);
+  paragraphs = loadText();
+  modal.classList.remove("on");
+  play();
+};
+modal.onclick = e => { if (e.target === modal) modal.classList.remove("on"); };
+
+const btnSound = document.getElementById("btnSound");
+btnSound.onclick = () => {
+  soundOn = !soundOn;
+  btnSound.textContent = "音效：" + (soundOn ? "开" : "关");
+};
+
+const btnTheme = document.getElementById("btnTheme");
+function setTheme(t) {
+  document.documentElement.setAttribute("data-theme", t);
+  btnTheme.textContent = t === "light" ? "深色" : "浅色";
+  localStorage.setItem("lin:theme", t);
+}
+btnTheme.onclick = () => {
+  setTheme(document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light");
+};
+
+/* ====== 启动 ====== */
+setTheme(localStorage.getItem("lin:theme") ||
+  (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark"));
+paragraphs = loadText();
+play();
+</script>
+</body>
+</html>
