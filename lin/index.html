@@ -242,7 +242,7 @@ function staticText() {
 function loadText() {
   const url = new URL(location.href);
   const fromUrl = url.searchParams.get("t") || decodeURIComponent((location.hash || "").replace(/^#/, ""));
-  const saved = localStorage.getItem("lin:text");
+  const saved = localStorage.getItem("lin:text:v2");
   const raw = fromUrl || saved;
   return raw ? raw.split(/\n\s*\n/).map(s => s.trim()).filter(Boolean) : staticText();
 }
@@ -327,7 +327,7 @@ document.getElementById("btnText").onclick = () => {
 };
 document.getElementById("btnCancel").onclick = () => modal.classList.remove("on");
 document.getElementById("btnSave").onclick = () => {
-  localStorage.setItem("lin:text", editor.value);
+  localStorage.setItem("lin:text:v2", editor.value);
   paragraphs = loadText();
   modal.classList.remove("on");
   play();
